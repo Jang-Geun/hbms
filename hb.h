@@ -1,0 +1,54 @@
+/*
+** svn $Id: damee_4.h 1001 2020-01-10 22:41:16Z arango $
+*******************************************************************************
+** Copyright (c) 2002-2020 The ROMS/TOMS Group                               **
+**   Licensed under a MIT/X style license                                    **
+**   See License_ROMS.txt                                                    **
+*******************************************************************************
+**
+** Options for North Atlantic DAMEE Application, 3/4 degree resolution
+**
+** Application flag:   DAMEE_4
+** Input script:       roms_damee_4.in
+*/
+
+#define UV_ADV
+#define UV_COR
+#define UV_LOGDRAG
+#define DJ_GRADPS
+#define SPLINES_VDIFF
+#define SPLINES_VVISC
+#define NONLIN_EOS
+#define SALINITY
+#define SOLVE3D
+#define MASKING
+#undef QCORRECTION
+#undef SRELAXATION
+#define CURVGRID
+#undef AVERAGES
+#define GLS_MIXING
+#ifdef LMD_MIXING
+# define LMD_RIMIX
+# define LMD_CONVEC
+# define LMD_SKPP
+# define LMD_NONLOCAL
+# define RI_SPLINES
+#endif
+#define ANA_BSFLUX
+#define ANA_BTFLUX
+
+#define WET_DRY
+
+#define SSH_TIDES
+#define UV_TIDES
+#define RAMP_TIDES
+
+#define ANA_SMFLUX
+#define ANA_STFLUX
+#define ANA_SSFLUX
+
+#define ANA_INITIAL
+#define ANA_FSOBC
+#define ANA_M2OBC
+#define ANA_M3OBC
+#define ANA_TOBC
